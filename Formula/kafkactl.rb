@@ -5,7 +5,7 @@ Multiple kafka brokers can be configured in a config file and the active broker 
 In addition kafkactl supports auto-completion for its commands as well as topic names.
 "
   homepage "https://www.device-insight.com/"
-  version "1.5.0-RC1"
+  version "1.5.0"
   bottle :unneeded
 
   if OS.mac?
