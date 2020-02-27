@@ -10,11 +10,11 @@ In addition kafkactl supports auto-completion for its commands as well as topic 
 
   if OS.mac?
     url "https://github.com/deviceinsight/kafkactl/releases/download/1.5.0/kafkactl_1.5.0_Darwin_x86_64.tar.gz"
-    sha256 "578e4abfe9c2ec0023cd4edf66d6d18900da838ede4a1787c0c27cebb2440c02"
+    sha256 "780b92ceb0024652e8948de4526259a63486d86a1f13239b22425854976b85cb"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/deviceinsight/kafkactl/releases/download/1.5.0/kafkactl_1.5.0_Linux_x86_64.tar.gz"
-      sha256 "31b7dbe518eb8c3388244ea8f64fa56e5a4ff31271a140840debac3dc0a10726"
+      sha256 "5d50e1ac9728f1405feb6111118a81739f2d0029e577ad51d70597f1764fba80"
     end
   end
 
