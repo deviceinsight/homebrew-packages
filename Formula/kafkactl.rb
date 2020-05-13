@@ -5,16 +5,16 @@ Multiple kafka brokers can be configured in a config file and the active broker 
 In addition kafkactl supports auto-completion for its commands as well as topic names.
 "
   homepage "https://www.device-insight.com/"
-  version "1.7.0"
+  version "1.8.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/deviceinsight/kafkactl/releases/download/1.7.0/kafkactl_1.7.0_Darwin_x86_64.tar.gz"
-    sha256 "9dfe68a6dddfc9a1bfc73b366a95acdafe64469025cc029d2778ac431837b7ec"
+    url "https://github.com/deviceinsight/kafkactl/releases/download/1.8.0/kafkactl_1.8.0_Darwin_x86_64.tar.gz"
+    sha256 "e2dcc8d59a30821bebc5440a642f0e74a919a8b78d6b2c15b987a333ad62bc45"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/1.7.0/kafkactl_1.7.0_Linux_x86_64.tar.gz"
-      sha256 "1a9586e62edfc852b7189f9e2466471592c65fea3f13efb839234a07efbcdd6d"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/1.8.0/kafkactl_1.8.0_Linux_x86_64.tar.gz"
+      sha256 "665fdd449f746e19f9a3515bd680bfcf56ca82b006758914cc0f11a878adbf26"
     end
   end
 
