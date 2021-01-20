@@ -8,20 +8,20 @@ Multiple kafka brokers can be configured in a config file and the active broker 
 In addition kafkactl supports auto-completion for its commands as well as topic names.
 "
   homepage "https://www.device-insight.com/"
-  version "1.15.0"
+  version "1.15.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/deviceinsight/kafkactl/releases/download/v1.15.0/kafkactl_1.15.0_Darwin_x86_64.tar.gz"
-    sha256 "5e7ad2b87c229ad7d0a9890472452473713a8212f16323725bd86bdc52458c84"
+    url "https://github.com/deviceinsight/kafkactl/releases/download/v1.15.1/kafkactl_1.15.1_Darwin_x86_64.tar.gz"
+    sha256 "7621d9f625eebd1bebbf3072478889b15389e972cf83d57c9ab23d7ca5d4621b"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/deviceinsight/kafkactl/releases/download/v1.15.0/kafkactl_1.15.0_Linux_x86_64.tar.gz"
-    sha256 "e5510a3ae818182f5426f14e14448954bc696e62e6c5a54209f4aff78eeb1675"
+    url "https://github.com/deviceinsight/kafkactl/releases/download/v1.15.1/kafkactl_1.15.1_Linux_x86_64.tar.gz"
+    sha256 "f4c10ebca8ddbec9f5db39c6fec607af36ef68e3eff426e1fea18b7402557382"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/deviceinsight/kafkactl/releases/download/v1.15.0/kafkactl_1.15.0_Linux_arm64.tar.gz"
-    sha256 "705247a413649bcc1ef82033bfa0155e1b2a82e3d2d8c773855289bdf7086e86"
+    url "https://github.com/deviceinsight/kafkactl/releases/download/v1.15.1/kafkactl_1.15.1_Linux_arm64.tar.gz"
+    sha256 "66e754851940a703c578961845401315b63acce50597f46366e64bd324084e31"
   end
 
   def install
