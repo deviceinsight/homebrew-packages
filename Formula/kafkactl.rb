@@ -8,24 +8,24 @@ Multiple kafka brokers can be configured in a config file and the active broker 
 In addition kafkactl supports auto-completion for its commands as well as topic names.
 "
   homepage "https://www.device-insight.com/"
-  version "1.17.0"
+  version "1.17.1"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/deviceinsight/kafkactl/releases/download/v1.17.0/kafkactl_1.17.0_darwin_amd64.tar.gz"
-    sha256 "653a436e0e6fcb8afca8c0e27e7fcab298044edd98f417d1f68ee2b4d31c00e6"
+    url "https://github.com/deviceinsight/kafkactl/releases/download/v1.17.1/kafkactl_1.17.1_darwin_amd64.tar.gz"
+    sha256 "3af5605933275c8a8dbef36f94bb17671d255843576ad0694ca44b9d6a020319"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/deviceinsight/kafkactl/releases/download/v1.17.0/kafkactl_1.17.0_darwin_arm64.tar.gz"
-    sha256 "ba8757dee9d7ff1bf9c8d80d72ba617574680849ebd407b90aca963d6519c174"
+    url "https://github.com/deviceinsight/kafkactl/releases/download/v1.17.1/kafkactl_1.17.1_darwin_arm64.tar.gz"
+    sha256 "e94885df945432b64700e30d063db30d379d366d552ebf8de3ddd980b18e329e"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/deviceinsight/kafkactl/releases/download/v1.17.0/kafkactl_1.17.0_linux_amd64.tar.gz"
-    sha256 "00c52519226298dddd193b2d5978108faf8dff29537f8e1e277eeb0da7e19d4e"
+    url "https://github.com/deviceinsight/kafkactl/releases/download/v1.17.1/kafkactl_1.17.1_linux_amd64.tar.gz"
+    sha256 "79be7a5c2cc93b3262f123f41f37d3b61ca9ca24f27315b65b20712d2faf78a1"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/deviceinsight/kafkactl/releases/download/v1.17.0/kafkactl_1.17.0_linux_arm64.tar.gz"
-    sha256 "3133cd38dd46a02bf2a2438184b34b57248aeb7734ef2d3583ab713c594424c4"
+    url "https://github.com/deviceinsight/kafkactl/releases/download/v1.17.1/kafkactl_1.17.1_linux_arm64.tar.gz"
+    sha256 "e88c1c1152e0a7d31b99116e8c6261dce6b80bb5604508b7c56805b6b606d056"
   end
 
   def install
