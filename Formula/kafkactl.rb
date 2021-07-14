@@ -8,28 +8,28 @@ Multiple kafka brokers can be configured in a config file and the active broker 
 In addition kafkactl supports auto-completion for its commands as well as topic names.
 "
   homepage "https://www.device-insight.com/"
-  version "1.17.2"
+  version "1.18.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.17.2/kafkactl_1.17.2_darwin_amd64.tar.gz"
-      sha256 "b832bd4a0d135179ed28c767bdc7a92bdf3ade04a94bd522907887e0e5e93b86"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.18.0/kafkactl_1.18.0_darwin_amd64.tar.gz"
+      sha256 "86d98cd7a57f3d66fb12f4b74543ea892b953038a2bc8d24d14b4cf5418f1102"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.17.2/kafkactl_1.17.2_darwin_arm64.tar.gz"
-      sha256 "04bdcbcbdb9e1cad0d974f24e0bd94426971cad4b79044ce4dd9c76d03ee7807"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.18.0/kafkactl_1.18.0_darwin_arm64.tar.gz"
+      sha256 "2b9a0f36c1f9d3ff1838eb883279a2ae9890fc7c7e618d385e5f221fa9639f61"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.17.2/kafkactl_1.17.2_linux_amd64.tar.gz"
-      sha256 "ec70ddd8996bc2ee292cc36626c3d2893cd0548fc66f1b7635a556104b9e3967"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.18.0/kafkactl_1.18.0_linux_amd64.tar.gz"
+      sha256 "4c6a5262e80037e3ff938f1e718a6ea1253123be7c02c1a0755131066534bfc9"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.17.2/kafkactl_1.17.2_linux_arm64.tar.gz"
-      sha256 "01b259924eeae79075b5137aa8b1a34af40a213a1a3fb6e059ff9ebec9764e4b"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.18.0/kafkactl_1.18.0_linux_arm64.tar.gz"
+      sha256 "0b2f668a8d0cc8ae9fb8dae16c514efad11133aa2fb868cd1289df1a026f98a6"
     end
   end
 
