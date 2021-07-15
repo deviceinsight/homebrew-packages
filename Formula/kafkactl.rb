@@ -8,28 +8,28 @@ Multiple kafka brokers can be configured in a config file and the active broker 
 In addition kafkactl supports auto-completion for its commands as well as topic names.
 "
   homepage "https://www.device-insight.com/"
-  version "1.18.0"
+  version "1.18.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.18.0/kafkactl_1.18.0_darwin_amd64.tar.gz"
-      sha256 "86d98cd7a57f3d66fb12f4b74543ea892b953038a2bc8d24d14b4cf5418f1102"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.18.1/kafkactl_1.18.1_darwin_amd64.tar.gz"
+      sha256 "a523cebed9bc7f8b06bb7b54a7dc0ece8c5b6606c44b2e84677a6add280885ea"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.18.0/kafkactl_1.18.0_darwin_arm64.tar.gz"
-      sha256 "2b9a0f36c1f9d3ff1838eb883279a2ae9890fc7c7e618d385e5f221fa9639f61"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.18.1/kafkactl_1.18.1_darwin_arm64.tar.gz"
+      sha256 "3c5499636129f69ad5c1d9a39c57146faceaaee497e12567ad4571a680bc4fa7"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.18.0/kafkactl_1.18.0_linux_amd64.tar.gz"
-      sha256 "4c6a5262e80037e3ff938f1e718a6ea1253123be7c02c1a0755131066534bfc9"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.18.1/kafkactl_1.18.1_linux_amd64.tar.gz"
+      sha256 "140a283a490601ccaaab9dce2330e120bfb61a3a6d341528051d85aeb3417d75"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.18.0/kafkactl_1.18.0_linux_arm64.tar.gz"
-      sha256 "0b2f668a8d0cc8ae9fb8dae16c514efad11133aa2fb868cd1289df1a026f98a6"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.18.1/kafkactl_1.18.1_linux_arm64.tar.gz"
+      sha256 "1a51a2946869d16edaa9426b100175c2a41b5d925807095a228171e082268baa"
     end
   end
 
