@@ -8,28 +8,28 @@ Multiple kafka brokers can be configured in a config file and the active broker 
 In addition kafkactl supports auto-completion for its commands as well as topic names.
 "
   homepage "https://www.device-insight.com/"
-  version "1.20.0"
+  version "1.20.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.20.0/kafkactl_1.20.0_darwin_amd64.tar.gz"
-      sha256 "5efe707bfb4e7825297f1ee9226a76aabee11567311b2300a61d626032593281"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.20.1/kafkactl_1.20.1_darwin_amd64.tar.gz"
+      sha256 "bf8989b164c43697392bc81cac6273356a68ed0e474758f16e93e7170e3ceebd"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.20.0/kafkactl_1.20.0_darwin_arm64.tar.gz"
-      sha256 "b1edbf8e24f8d27256daa4a8ac10af4c5a4e2aabf70acb1572881a14f4aa9ff8"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.20.1/kafkactl_1.20.1_darwin_arm64.tar.gz"
+      sha256 "7fb7b648e3b7515df8dfce159cc7b6d5ceb76b50551070049639aa0386e64116"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.20.0/kafkactl_1.20.0_linux_amd64.tar.gz"
-      sha256 "4af8fb4dfde524be6ba0d5e168b5ca2d435baeb538a63a4cc78cee00d9f27074"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.20.1/kafkactl_1.20.1_linux_amd64.tar.gz"
+      sha256 "d2fed44daa2aa53493977ee04d8c95895cacf8a96f5f834377592ac9c651da4b"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.20.0/kafkactl_1.20.0_linux_arm64.tar.gz"
-      sha256 "02689b9b8e0c8703d66c962caa25a3836fb074ee12bba09390efab3bf774a312"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.20.1/kafkactl_1.20.1_linux_arm64.tar.gz"
+      sha256 "36e4c4d8d04f8f3e2e1b8f937695337e15e074f13f4f814688d68cf429c5bb93"
     end
   end
 
