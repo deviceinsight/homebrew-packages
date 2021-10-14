@@ -8,28 +8,28 @@ Multiple kafka brokers can be configured in a config file and the active broker 
 In addition kafkactl supports auto-completion for its commands as well as topic names.
 "
   homepage "https://www.device-insight.com/"
-  version "1.21.0"
+  version "1.22.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.21.0/kafkactl_1.21.0_darwin_amd64.tar.gz"
-      sha256 "5e7e31168754f3c1d3e7cc75bcd5f2389419fb0c06986fe898fa036414b45fd3"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.22.0/kafkactl_1.22.0_darwin_amd64.tar.gz"
+      sha256 "113a88ad672afa8cdb714da1e1dc3ca74efad98bb344c0d3bb2a5739ac8edaeb"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.21.0/kafkactl_1.21.0_darwin_arm64.tar.gz"
-      sha256 "718de1163f79e6051284ac08d8440194b1d96a4ba64e34fa379dc6ddfd01ff7e"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.22.0/kafkactl_1.22.0_darwin_arm64.tar.gz"
+      sha256 "c62099ddab10c8154923b8ae22bfb9acba905985e3a26ebad06ad6acee9d1bb6"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.21.0/kafkactl_1.21.0_linux_amd64.tar.gz"
-      sha256 "18e8352cb95f3e400efa115c8f8259fcaae4a4db40a14f8b683773d8ccdd0cea"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.21.0/kafkactl_1.21.0_linux_arm64.tar.gz"
-      sha256 "9fd0f20b93851633f7bacbfb915cdae70ce6f76c9d17c5250b1cea49b6de5e88"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.22.0/kafkactl_1.22.0_linux_arm64.tar.gz"
+      sha256 "9aff0e7edea7c3efaf4febdfd187fd2fda89b5ebd2d8b5c9d94596cb5543a57c"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.22.0/kafkactl_1.22.0_linux_amd64.tar.gz"
+      sha256 "54933d692d4a704176a73723418850ef01ae9b313660824505742aba65aabe9a"
     end
   end
 
