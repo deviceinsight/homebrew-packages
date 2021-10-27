@@ -9,7 +9,6 @@ In addition kafkactl supports auto-completion for its commands as well as topic 
 "
   homepage "https://www.device-insight.com/"
   version "1.22.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
