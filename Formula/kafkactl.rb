@@ -8,32 +8,43 @@ Multiple kafka brokers can be configured in a config file and the active broker 
 In addition kafkactl supports auto-completion for its commands as well as topic names.
 "
   homepage "https://www.device-insight.com/"
-  version "1.22.0"
-  bottle :unneeded
+  version "1.22.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.22.0/kafkactl_1.22.0_darwin_amd64.tar.gz"
-      sha256 "113a88ad672afa8cdb714da1e1dc3ca74efad98bb344c0d3bb2a5739ac8edaeb"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.22.1/kafkactl_1.22.1_darwin_amd64.tar.gz"
+      sha256 "488b94658920985c4604353d1d09b9aff9140b81fca6c2452e47e01fc9961c37"
+
+      def install
+        bin.install "kafkactl"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.22.0/kafkactl_1.22.0_darwin_arm64.tar.gz"
-      sha256 "c62099ddab10c8154923b8ae22bfb9acba905985e3a26ebad06ad6acee9d1bb6"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.22.1/kafkactl_1.22.1_darwin_arm64.tar.gz"
+      sha256 "14f7d7822797c9366fbb6917e2e901d1f76566d09dcf8487694f0adb0e30f301"
+
+      def install
+        bin.install "kafkactl"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.22.0/kafkactl_1.22.0_linux_arm64.tar.gz"
-      sha256 "9aff0e7edea7c3efaf4febdfd187fd2fda89b5ebd2d8b5c9d94596cb5543a57c"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.22.0/kafkactl_1.22.0_linux_amd64.tar.gz"
-      sha256 "54933d692d4a704176a73723418850ef01ae9b313660824505742aba65aabe9a"
-    end
-  end
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.22.1/kafkactl_1.22.1_linux_amd64.tar.gz"
+      sha256 "6d12a5bf23e9a17113d64a87a04c0b72a06cc9bc32e8c5b7c1bac8aa43316155"
 
-  def install
-    bin.install "kafkactl"
+      def install
+        bin.install "kafkactl"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v1.22.1/kafkactl_1.22.1_linux_arm64.tar.gz"
+      sha256 "be503a539f81bf1bd77dcb8cc060215f5b6de030548bcfaa2684cd3124324e01"
+
+      def install
+        bin.install "kafkactl"
+      end
+    end
   end
 end
