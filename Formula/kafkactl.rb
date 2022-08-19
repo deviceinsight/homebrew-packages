@@ -8,20 +8,20 @@ Multiple kafka brokers can be configured in a config file and the active broker 
 In addition kafkactl supports auto-completion for its commands as well as topic names.
 "
   homepage "https://www.device-insight.com/"
-  version "2.4.0"
+  version "2.5.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v2.4.0/kafkactl_2.4.0_darwin_amd64.tar.gz"
-      sha256 "23fc71b7024ada0194b07c83bcec861482bc2f2b1f5d7cce790cc3d55e14c7d3"
+    if Hardware::CPU.arm?
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v2.5.0/kafkactl_2.5.0_darwin_arm64.tar.gz"
+      sha256 "512c513eda945be4e0904035acae64f54eaa9d4855ae83fef2da87b5061a056f"
 
       def install
         bin.install "kafkactl"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v2.4.0/kafkactl_2.4.0_darwin_arm64.tar.gz"
-      sha256 "2bed9b4fe3a01f43d80c57718a5fbbe8b794545645ccc5ab5c1ee1293de24187"
+    if Hardware::CPU.intel?
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v2.5.0/kafkactl_2.5.0_darwin_amd64.tar.gz"
+      sha256 "abda06e2942d707deb6e838d36c3a217dcc223b5a5baae4b50f915cb780e001b"
 
       def install
         bin.install "kafkactl"
@@ -31,16 +31,16 @@ In addition kafkactl supports auto-completion for its commands as well as topic 
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v2.4.0/kafkactl_2.4.0_linux_arm64.tar.gz"
-      sha256 "5ad56f88a138f55854a5614832b9765d5df4189c9ff2e7ab5933b7f774482637"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v2.5.0/kafkactl_2.5.0_linux_arm64.tar.gz"
+      sha256 "a79c3dba3e00373b21fe84155c6958a8c89323762d08738e696ef7a48fe99185"
 
       def install
         bin.install "kafkactl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v2.4.0/kafkactl_2.4.0_linux_amd64.tar.gz"
-      sha256 "facd4db1fbf10c8d14154e14943463b4d6da26f12caf2e7de3359c7002180755"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v2.5.0/kafkactl_2.5.0_linux_amd64.tar.gz"
+      sha256 "360d91109b22bd82707e5474d1e62360778d3118d97f4d1f4c645dc940a1a57f"
 
       def install
         bin.install "kafkactl"
