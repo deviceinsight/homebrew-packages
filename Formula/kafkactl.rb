@@ -8,20 +8,20 @@ Multiple kafka brokers can be configured in a config file and the active broker 
 In addition kafkactl supports auto-completion for its commands as well as topic names.
 "
   homepage "https://www.device-insight.com/"
-  version "3.0.2"
+  version "3.0.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v3.0.2/kafkactl_3.0.2_darwin_amd64.tar.gz"
-      sha256 "fd5745f144af8cb9dc34d3aa4f41565b2df8b1ea438d652a7ad3efdd525ca309"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v3.0.3/kafkactl_3.0.3_darwin_amd64.tar.gz"
+      sha256 "756283b3c1948f8aa213d0529b8625c64e0e88669aeffb2bfaa50c0c1b81a2f8"
 
       def install
         bin.install "kafkactl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v3.0.2/kafkactl_3.0.2_darwin_arm64.tar.gz"
-      sha256 "518d11f61e783de05995425df3c7199e6c87d284fa7bd00f5353c9460ebb279b"
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v3.0.3/kafkactl_3.0.3_darwin_arm64.tar.gz"
+      sha256 "a2cd834c7e07b28e2d4982a0535e884542961b4e1e2ceaefd763e2b083eac944"
 
       def install
         bin.install "kafkactl"
@@ -30,17 +30,17 @@ In addition kafkactl supports auto-completion for its commands as well as topic 
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v3.0.2/kafkactl_3.0.2_linux_amd64.tar.gz"
-      sha256 "68b83a15fe623b28b0e36ec9431224e14a3bdc0ec76fe28eec56e0a0e2bf8c1d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v3.0.3/kafkactl_3.0.3_linux_arm64.tar.gz"
+      sha256 "b5e77955a730bb6f388490409f5064e268093025fedf0fe873ed7dac1ccc7bfe"
 
       def install
         bin.install "kafkactl"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deviceinsight/kafkactl/releases/download/v3.0.2/kafkactl_3.0.2_linux_arm64.tar.gz"
-      sha256 "4b08e79862a3b9020cf3ff42a48bd9ccf4532532ed84c1156b6b22538fadc438"
+    if Hardware::CPU.intel?
+      url "https://github.com/deviceinsight/kafkactl/releases/download/v3.0.3/kafkactl_3.0.3_linux_amd64.tar.gz"
+      sha256 "66724572f71e9de6368a1d177989a4288cf17ccc5f8c1c472e9d08d1de47bac4"
 
       def install
         bin.install "kafkactl"
