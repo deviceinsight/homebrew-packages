@@ -5,22 +5,22 @@
 class KafkactlAzurePlugin < Formula
   desc "Azure Plugin for kafkactl"
   homepage "https://www.device-insight.com/"
-  version "1.0.5"
+  version "1.1.0"
 
   depends_on "kafkactl"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.0.5/kafkactl-azure-plugin_1.0.5_darwin_arm64.tar.gz"
-      sha256 "431d40ee260606562116dff92d406a0d8e57c7a02654d1d53b8e10027d493b70"
+    on_intel do
+      url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.1.0/kafkactl-azure-plugin_1.1.0_darwin_amd64.tar.gz"
+      sha256 "fb2e0e96090782a6c8f58e909bcf8d8edb6ae0887f7c0670c4e16afacc44f562"
 
       def install
         bin.install "kafkactl-azure-plugin"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.0.5/kafkactl-azure-plugin_1.0.5_darwin_amd64.tar.gz"
-      sha256 "d67cec4d568b492a5fdb95669cac5c553ae8956dbbc4b636688f429cbfc58ae4"
+    on_arm do
+      url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.1.0/kafkactl-azure-plugin_1.1.0_darwin_arm64.tar.gz"
+      sha256 "ad682283a0ff5507e20fdb46d8bc02d3af184bcd290d148c88be6a88ccc6a074"
 
       def install
         bin.install "kafkactl-azure-plugin"
@@ -29,20 +29,24 @@ class KafkactlAzurePlugin < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.0.5/kafkactl-azure-plugin_1.0.5_linux_amd64.tar.gz"
-      sha256 "3f30b0a8393b201867f280978f665f67c290a56c3f6b5cf2250c561408d0a660"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.1.0/kafkactl-azure-plugin_1.1.0_linux_amd64.tar.gz"
+        sha256 "ec511928864eb3c40bb7eecd4664d95ba5285edbd64a76c1e39996e76536e4f9"
 
-      def install
-        bin.install "kafkactl-azure-plugin"
+        def install
+          bin.install "kafkactl-azure-plugin"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.0.5/kafkactl-azure-plugin_1.0.5_linux_arm64.tar.gz"
-      sha256 "e6c5873b9d135dce16635cdaaae59bb6dbe5f4d54ecad749ba72ebaf31514537"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.1.0/kafkactl-azure-plugin_1.1.0_linux_arm64.tar.gz"
+        sha256 "2607a31e75847580fe4da1cbded3cff0eb23da66a4a8ddb0c2fe22bbc23db64d"
 
-      def install
-        bin.install "kafkactl-azure-plugin"
+        def install
+          bin.install "kafkactl-azure-plugin"
+        end
       end
     end
   end
