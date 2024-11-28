@@ -13,7 +13,7 @@ In addition kafkactl supports auto-completion for its commands as well as topic 
   on_macos do
     on_intel do
       url "https://github.com/deviceinsight/kafkactl/releases/download/v5.4.0/kafkactl_5.4.0_darwin_amd64.tar.gz"
-      sha256 "9557eec2d839cff09b0f03db91317a2638dd1b57432e5064e7dbe34b4f195e38"
+      sha256 "6fe1173b31d7990f46c84eb49411eab99c3e0c6248c07cd4ff6c8c846dfcf5c6"
 
       def install
         bin.install "kafkactl"
@@ -21,7 +21,7 @@ In addition kafkactl supports auto-completion for its commands as well as topic 
     end
     on_arm do
       url "https://github.com/deviceinsight/kafkactl/releases/download/v5.4.0/kafkactl_5.4.0_darwin_arm64.tar.gz"
-      sha256 "8da054c93d6dadc58490025399b4ead9b192f446fd8e590d6f7192a6065470f8"
+      sha256 "7f8974b4bb387595ab8975b40424b5d0a8c015658a8fcfbe69c56270491c9ceb"
 
       def install
         bin.install "kafkactl"
@@ -33,7 +33,7 @@ In addition kafkactl supports auto-completion for its commands as well as topic 
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/deviceinsight/kafkactl/releases/download/v5.4.0/kafkactl_5.4.0_linux_amd64.tar.gz"
-        sha256 "f718aa0df9347f5a3dfbec4fc664d39a3f6fa0bd91ed1ba41ec49bf225a55a61"
+        sha256 "a5275432ed45948183ccbb1526f18ee77a1d2e85fdd8d18d78d7e74380d5a455"
 
         def install
           bin.install "kafkactl"
@@ -43,7 +43,7 @@ In addition kafkactl supports auto-completion for its commands as well as topic 
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/deviceinsight/kafkactl/releases/download/v5.4.0/kafkactl_5.4.0_linux_arm64.tar.gz"
-        sha256 "b1f701fbad2ee098383c2be27e447786c41e24728502f27b21d8b919b1e82cbc"
+        sha256 "a735cd99d996c66bb9497a985b8739748a70ab4726f6f974e6e08659dcf99fea"
 
         def install
           bin.install "kafkactl"
