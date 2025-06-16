@@ -5,22 +5,22 @@
 class KafkactlAzurePlugin < Formula
   desc "Azure Plugin for kafkactl"
   homepage "https://www.device-insight.com/"
-  version "1.2.0"
+  version "1.3.0"
 
   depends_on "kafkactl"
 
   on_macos do
     on_intel do
-      url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.2.0/kafkactl-azure-plugin_1.2.0_darwin_amd64.tar.gz"
-      sha256 "4466e5294d6694802389e1ac1f23668ae41ad2d804ce7bbd380c28cbc8f6c239"
+      url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.3.0/kafkactl-azure-plugin_1.3.0_darwin_amd64.tar.gz"
+      sha256 "06c1f7acfcb67966f2eb7f6288e9b1ee740313d14937e4f9b5fcc1ce1f6461e1"
 
       def install
         bin.install "kafkactl-azure-plugin"
       end
     end
     on_arm do
-      url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.2.0/kafkactl-azure-plugin_1.2.0_darwin_arm64.tar.gz"
-      sha256 "28ed90b051203cb26b2f894a466a3af5f60e4633ab69cc97e218c337dc759c2f"
+      url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.3.0/kafkactl-azure-plugin_1.3.0_darwin_arm64.tar.gz"
+      sha256 "84bf867f5daf5b00cf90fe7f3852ccc7ec7c759ec1dc35539b28a23d47d7db46"
 
       def install
         bin.install "kafkactl-azure-plugin"
@@ -31,8 +31,8 @@ class KafkactlAzurePlugin < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.2.0/kafkactl-azure-plugin_1.2.0_linux_amd64.tar.gz"
-        sha256 "d7a245b21001bdff1e630f0fa644d99e54d7dc8e6fe6b3fe5e2c8c839bfb751f"
+        url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.3.0/kafkactl-azure-plugin_1.3.0_linux_amd64.tar.gz"
+        sha256 "40ff54cfec17dfa50f1ea12db1055a3e26a2e26e338f4e5c0c421c2f1093865b"
 
         def install
           bin.install "kafkactl-azure-plugin"
@@ -41,8 +41,8 @@ class KafkactlAzurePlugin < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.2.0/kafkactl-azure-plugin_1.2.0_linux_arm64.tar.gz"
-        sha256 "30d4cdcdb0005343a8008755296f4bf959b51adb732da2d0739ccdb59fbba4c4"
+        url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.3.0/kafkactl-azure-plugin_1.3.0_linux_arm64.tar.gz"
+        sha256 "76e6c25832ffc9e28a61d40b6f2a9d2abffd768dcd740c55cd280c440deb0d68"
 
         def install
           bin.install "kafkactl-azure-plugin"
