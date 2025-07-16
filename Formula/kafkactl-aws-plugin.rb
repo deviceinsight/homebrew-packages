@@ -5,22 +5,22 @@
 class KafkactlAwsPlugin < Formula
   desc "AWS Plugin for kafkactl"
   homepage "https://www.device-insight.com/"
-  version "1.3.0"
+  version "1.3.1"
 
   depends_on "kafkactl"
 
   on_macos do
     on_intel do
-      url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.3.0/kafkactl-aws-plugin_1.3.0_darwin_amd64.tar.gz"
-      sha256 "13ed1a563f4524acb39dc6cd1ec74c9fea27f9fe9a264afe1e8e6094e2acca06"
+      url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.3.1/kafkactl-aws-plugin_1.3.1_darwin_amd64.tar.gz"
+      sha256 "16af2da685a33c2b282c91168dea0756b596e46966157debb02bf3377a570ac6"
 
       def install
         bin.install "kafkactl-aws-plugin"
       end
     end
     on_arm do
-      url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.3.0/kafkactl-aws-plugin_1.3.0_darwin_arm64.tar.gz"
-      sha256 "8286662c70c8a22aa9e27e4f347e0b08cb96cde8db7932762d410af749a86f39"
+      url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.3.1/kafkactl-aws-plugin_1.3.1_darwin_arm64.tar.gz"
+      sha256 "43967746152d7a95e027f2a67446699a48cdd418bfe0eccd7d0111eec88d525c"
 
       def install
         bin.install "kafkactl-aws-plugin"
@@ -31,8 +31,8 @@ class KafkactlAwsPlugin < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.3.0/kafkactl-aws-plugin_1.3.0_linux_amd64.tar.gz"
-        sha256 "1a1b1e290600bb1209ca98f531eef644c3f551222a69309dbd9acdeb900b7f63"
+        url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.3.1/kafkactl-aws-plugin_1.3.1_linux_amd64.tar.gz"
+        sha256 "e98f03b5cd3c2498656552dae2394eb821230b7a360397f8b60e321826d7e791"
 
         def install
           bin.install "kafkactl-aws-plugin"
@@ -41,8 +41,8 @@ class KafkactlAwsPlugin < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.3.0/kafkactl-aws-plugin_1.3.0_linux_arm64.tar.gz"
-        sha256 "9be9e267376b41df0280b8c54d1fb060321c45ad52176f00ef96e050ba8efe5e"
+        url "https://github.com/deviceinsight/kafkactl-plugins/releases/download/v1.3.1/kafkactl-aws-plugin_1.3.1_linux_arm64.tar.gz"
+        sha256 "037aec68858c9af45c44bc32fb98ee981d6ed874d15a84329bc3ea225f4e36b7"
 
         def install
           bin.install "kafkactl-aws-plugin"
