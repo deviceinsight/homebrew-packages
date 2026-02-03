@@ -6,7 +6,7 @@ Multiple kafka brokers can be configured in a config file and the active broker 
 In addition kafkactl supports auto-completion for its commands as well as topic names.
 "
   homepage "https://www.device-insight.com/"
-  version "5.17.0"
+  version "5.17.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,22 +17,22 @@ In addition kafkactl supports auto-completion for its commands as well as topic 
   on_macos do
     on_intel do
       url "https://github.com/deviceinsight/kafkactl/releases/download/v#{version}/kafkactl_#{version}_darwin_amd64.tar.gz"
-      sha256 "22c13995e832179b2d52915c3769871bdea416b8bc9b7502ee6756db15fd7ac2"
+      sha256 "5b17b7cca8d9dcccb6a05784e9daef8a1f66c78dabea3ed142f05bd78c83fe27"
     end
     on_arm do
       url "https://github.com/deviceinsight/kafkactl/releases/download/v#{version}/kafkactl_#{version}_darwin_arm64.tar.gz"
-      sha256 "83dcfdf2617a76c5a297026eab76899df03323a3ac90a144129e8ae8b4cc48b9"
+      sha256 "1c6020c372b59f3df69393f39d999dd6c8b51016c6357222236715cb74072584"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/deviceinsight/kafkactl/releases/download/v#{version}/kafkactl_#{version}_linux_amd64.tar.gz"
-      sha256 "ff8c27560b71d275d9ce377c9d8adb817ca7d79b60d368d712c617bb7a8a479f"
+      sha256 "78a4e92a6309fedd6766c1e0be9125ebf481359b275c306dc0243378eb2f31e9"
     end
     on_arm do
       url "https://github.com/deviceinsight/kafkactl/releases/download/v#{version}/kafkactl_#{version}_linux_arm64.tar.gz"
-      sha256 "200ef4dbe5422dba8b2d5525f818346d7d0ac13ba54f41f0c8b80652f5fdbd72"
+      sha256 "3e3bd931292c9801658f1dfffe17d59c628d756be2232ada7a8af2520574b34d"
     end
   end
 
